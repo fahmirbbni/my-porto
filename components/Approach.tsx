@@ -7,7 +7,7 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        Project <span className="text-purple">Workflow</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -15,9 +15,7 @@ const Approach = () => {
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          des="Together, we’ll define the goals of your website, identify the target audience, and outline core features. This phase covers site architecture, user flow, and content planning to ensure a clear, effective foundation."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -28,9 +26,7 @@ const Approach = () => {
         <Card
           title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          des="After finalizing the plan, development begins. From the first lines of code to refined features, I keep you regularly informed with progress updates, ensuring transparency and alignment throughout the process."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -50,15 +46,9 @@ const Approach = () => {
         <Card
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          des="With the design finalized, I bring the vision to life through clean, functional code. This phase involves full website development, testing, and preparing everything for a smooth and successful launch."
         >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
-            colors={[[125, 211, 252]]}
-          />
+          <CanvasRevealEffect animationSpeed={3} containerClassName="bg-sky-600 rounded-3xl overflow-hidden" colors={[[125, 211, 252]]} />
         </Card>
       </div>
     </section>
@@ -91,8 +81,7 @@ const Card = ({
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
         background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
       {/* change to h-10 w-10 , add opacity-30  */}
@@ -103,11 +92,7 @@ const Card = ({
 
       <AnimatePresence>
         {hovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
-          >
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full w-full absolute inset-0">
             {children}
           </motion.div>
         )}
@@ -187,15 +172,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
 
 export const Icon = ({ className, ...rest }: any) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={className} {...rest}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
     </svg>
   );
