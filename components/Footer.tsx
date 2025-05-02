@@ -1,29 +1,29 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full pt-20 pb-10 relative z-10" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img src="/footer-grid.svg" alt="grid" className="w-full h-full opacity-50 " />
+      <div className="w-full absolute left-0 -bottom-72 min-h-96 z-0">
+        <img src="/footer-grid.svg" alt="grid" className="w-full h-full opacity-50 object-cover" />
       </div>
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
+      <div className="flex flex-col items-center relative z-10">
+        <h1 className="heading lg:max-w-[45vw] text-center">
           Ready to elevate <span className="text-purple">your</span> online presence?
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center"> Get in touch today to explore how we can bring your ideas to life and create a digital experience that truly stands out.</p>
+        <p className="text-white-200 md:mt-10 my-5 text-center">Get in touch today to explore how we can bring your ideas to life and create a digital experience that truly stands out.</p>
         <a href="mailto:fr.proffesional@gmail.com">
           <MagicButton title="Connect with Me" icon={<FaLocationArrow />} position="right" />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center relative z-10">
         <p className="md:text-base text-sm md:font-normal font-light">Copyright © 2025</p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex items-center md:gap-3 gap-6 mt-4 md:mt-0">
           {socialMedia.map((info) => (
             <a
               key={info.id}
